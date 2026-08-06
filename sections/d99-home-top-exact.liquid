@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="{{ 'd99-horizon.css' | asset_url }}">
+<section class="d99-top-exact">
+  <div class="d99-top-exact__left">
+    <div class="d99-top-exact__text">
+      {{ section.settings.left_text | default: "DOESN'T WANT<br>YOU TO WIN." }}
+    </div>
+  </div>
+  <div class="d99-top-exact__right">
+    <a href="{{ section.settings.button_link | default: routes.all_products_collection_url }}" class="d99-top-exact__btn">
+      <span>{{ section.settings.button_label | default: "SHOP NOW" }}</span>
+      <span>→</span>
+    </a>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "D99 Home Top Exact",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "left_text",
+      "label": "Left Text (HTML allowed)",
+      "default": "DOESN'T WANT<br>YOU TO WIN."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "SHOP NOW"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [{ "name": "D99 Home Top Exact" }]
+}
+{% endschema %}

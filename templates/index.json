@@ -1,81 +1,41 @@
 {
   "sections": {
-    "announcement-bar": {
-      "type": "announcement-bar",
+    "d99-header": {
+      "type": "d99-system-header",
       "settings": {
-        "text": "FREE SHIPPING ON ORDERS OVER 999 EGP — شحن مجاني للطلبات فوق 999 جنيه",
-        "link": ""
+        "menu": "main-menu"
       }
     },
-    "hero": {
-      "type": "hero-banner",
+    "d99-top-exact": {
+      "type": "d99-home-top-exact",
       "settings": {
-        "heading": "DISTRICT 99",
-        "subheading": "STREETWEAR REDEFINED",
-        "text": "Collection 2025 — تصميم عصري، خامة بريميوم، ستايل يخطف النظر",
-        "button_label": "تسوق الآن",
-        "button_link": "shopify://collections/all",
-        "image": "",
-        "image_overlay_opacity": 40
+        "left_text": "DOESN'T WANT<br>YOU TO WIN.",
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://collections/all"
+      }
+    },
+    "d99-bottom-exact": {
+      "type": "d99-home-bottom-exact",
+      "settings": {
+        "cell1_kicker": "D99™ ESSENTIAL",
+        "cell1_title": "OVERSIZED TEE<br>BLACK",
+        "cell1_show_placeholder": true,
+        "cell2_text": "BUILD YOURS.<br>BREAK THEIR<br>SYSTEM.",
+        "cell3_big": "COP<br>NOW",
+        "cell4_kicker": "D99™",
+        "cell4_title": "PARACORD<br>CHAIN"
       }
     },
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "BEST SELLERS — الأكثر مبيعاً",
+        "title": "LATEST DROPS",
         "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
         "show_view_all": true
       }
-    },
-    "image-with-text": {
-      "type": "image-with-text",
-      "settings": {
-        "heading": "QUALITY OVER HYPE",
-        "text": "كل قطعة مصنوعة بعناية بأجود الخامات. مقاسات مظبوطة، تقفيل عالي، و ستايل يليق بيك.",
-        "button_label": "اعرف اكتر",
-        "button_link": "shopify://pages/about"
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "settings": {
-        "title": "ليه DISTRICT 99 ؟",
-        "columns_desktop": 3
-      },
-      "blocks": {
-        "col1": {
-          "type": "column",
-          "settings": {
-            "title": "شحن سريع",
-            "text": "توصيل خلال 2-4 أيام لجميع المحافظات والدفع عند الاستلام"
-          }
-        },
-        "col2": {
-          "type": "column",
-          "settings": {
-            "title": "استرجاع مجاني",
-            "text": "14 يوم استرجاع واستبدال بدون أي مصاريف"
-          }
-        },
-        "col3": {
-          "type": "column",
-          "settings": {
-            "title": "خامة بريميوم",
-            "text": "قطن 100% معالَج ضد الانكماش والوبر"
-          }
-        }
-      },
-      "block_order": ["col1", "col2", "col3"]
-    },
-    "newsletter": {
-      "type": "newsletter",
-      "settings": {
-        "heading": "خليك في المقدمة",
-        "text": "اشترك واحصل على خصم 10% على اول اوردر + عروض حصرية"
-      }
     }
   },
-  "order": ["announcement-bar", "hero", "featured-collection", "image-with-text", "multicolumn", "newsletter"]
+  "order": ["d99-header", "d99-top-exact", "d99-bottom-exact", "featured-collection"]
 }

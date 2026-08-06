@@ -2,8 +2,7 @@
   "name": "Header Group",
   "type": "header",
   "sections": {
-    "announcement-bar": { "type": "announcement-bar", "settings": { "text": "FREE SHIPPING ON ORDERS OVER 999 EGP" } },
-    "header": { "type": "header", "settings": { "menu": "main-menu" } }
+    "d99-system-header": { "type": "d99-system-header", "settings": { "menu": "main-menu" } }
   },
-  "order": ["announcement-bar", "header"]
+  "order": ["d99-system-header"]
 }

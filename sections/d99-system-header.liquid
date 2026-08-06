@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="{{ 'd99-horizon.css' | asset_url }}">
+<header class="d99-system-header">
+  <div class="d99-system-header__inner">
+    <a href="{{ routes.root_url }}" class="d99-system-header__logo">
+      {% if section.settings.logo != blank %}
+        {{ section.settings.logo | image_url: width: 160 | image_tag }}
+      {% else %}
+        D99™
+      {% endif %}
+    </a>
+    <nav class="d99-system-header__nav">
+      {% for link in linklists[section.settings.menu].links %}
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      {% else %}
+        <a href="{{ routes.all_products_collection_url }}">SHOP</a>
+        <a href="{{ routes.collections_url }}">COLLECTION</a>
+        <a href="/pages/about">ABOUT</a>
+        <a href="/pages/contact">CONTACT</a>
+      {% endfor %}
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center">
+      <a href="{{ routes.search_url }}" style="width:36px;height:36px;display:grid;place-items:center;border:1.5px solid #111;border-radius:50%"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></a>
+      <a href="{{ routes.cart_url }}" style="width:36px;height:36px;display:grid;place-items:center;border:1.5px solid #111;border-radius:50%;font-weight:900;font-size:11px">{{ cart.item_count }}</a>
+    </div>
+  </div>
+</header>
+{% schema %}
+{
+  "name": "D99 System Header",
+  "settings": [
+    { "type": "image_picker", "id": "logo", "label": "Logo" },
+    { "type": "link_list", "id": "menu", "label": "Menu", "default": "main-menu" }
+  ]
+}
+{% endschema %}

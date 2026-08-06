@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="{{ 'd99-horizon.css' | asset_url }}">
+<section class="d99-bottom-exact">
+  <!-- Cell 1 -->
+  <div class="d99-cell">
+    <div>
+      <div class="d99-cell__kicker">{{ section.settings.cell1_kicker | default: "D99™ ESSENTIAL" }}</div>
+      <div class="d99-cell__mid">{{ section.settings.cell1_title | default: "OVERSIZED TEE<br>BLACK" }}</div>
+    </div>
+    {% if section.settings.cell1_image != blank %}
+      <div class="d99-cell__img">{{ section.settings.cell1_image | image_url: width: 600 | image_tag }}</div>
+    {% elsif section.settings.cell1_show_placeholder %}
+      <div class="d99-cell__img" style="display:grid;place-items:center;background:#e9e9e9;color:#777;font-weight:800;letter-spacing:.1em;font-size:12px">TEE IMAGE</div>
+    {% endif %}
+  </div>
+
+  <!-- Cell 2 -->
+  <div class="d99-cell">
+    <div>
+      <div class="d99-cell__kicker" style="opacity:.0">.</div>
+      <div class="d99-cell__mid">{{ section.settings.cell2_text | default: "BUILD YOURS.<br>BREAK THEIR<br>SYSTEM." }}</div>
+    </div>
+    {% if section.settings.cell2_image != blank %}
+      <div class="d99-cell__img">{{ section.settings.cell2_image | image_url: width: 600 | image_tag }}</div>
+    {% endif %}
+  </div>
+
+  <!-- Cell 3 - COP NOW big -->
+  <div class="d99-cell d99-cell--accent" style="justify-content:center; text-align:center;">
+    <div class="d99-cell__big">{{ section.settings.cell3_big | default: "COP<br>NOW" }}</div>
+    {% if section.settings.cell3_link != blank %}
+      <a href="{{ section.settings.cell3_link }}" style="position:absolute;inset:0" aria-label="COP NOW"></a>
+    {% endif %}
+  </div>
+
+  <!-- Cell 4 -->
+  <div class="d99-cell">
+    <div>
+      <div class="d99-cell__kicker">{{ section.settings.cell4_kicker | default: "D99™" }}</div>
+      <div class="d99-cell__mid">{{ section.settings.cell4_title | default: "PARACORD<br>CHAIN" }}</div>
+    </div>
+    {% if section.settings.cell4_image != blank %}
+      <div class="d99-cell__img">{{ section.settings.cell4_image | image_url: width: 600 | image_tag }}</div>
+    {% endif %}
+  </div>
+</section>
+{% schema %}
+{
+  "name": "D99 Home Bottom Exact",
+  "settings": [
+    { "type": "text", "id": "cell1_kicker", "label": "Cell 1 Kicker", "default": "D99™ ESSENTIAL" },
+    { "type": "textarea", "id": "cell1_title", "label": "Cell 1 Title (HTML)", "default": "OVERSIZED TEE<br>BLACK" },
+    { "type": "image_picker", "id": "cell1_image", "label": "Cell 1 Image" },
+    { "type": "checkbox", "id": "cell1_show_placeholder", "label": "Show Placeholder Box", "default": true },
+    { "type": "textarea", "id": "cell2_text", "label": "Cell 2 Text (HTML)", "default": "BUILD YOURS.<br>BREAK THEIR<br>SYSTEM." },
+    { "type": "image_picker", "id": "cell2_image", "label": "Cell 2 Image" },
+    { "type": "textarea", "id": "cell3_big", "label": "Cell 3 Big Text (HTML)", "default": "COP<br>NOW" },
+    { "type": "url", "id": "cell3_link", "label": "Cell 3 Link" },
+    { "type": "text", "id": "cell4_kicker", "label": "Cell 4 Kicker", "default": "D99™" },
+    { "type": "textarea", "id": "cell4_title", "label": "Cell 4 Title (HTML)", "default": "PARACORD<br>CHAIN" },
+    { "type": "image_picker", "id": "cell4_image", "label": "Cell 4 Image" }
+  ],
+  "presets": [{ "name": "D99 Home Bottom Exact" }]
+}
+{% endschema %}
