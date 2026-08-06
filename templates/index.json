@@ -1,0 +1,81 @@
+{
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "settings": {
+        "text": "FREE SHIPPING ON ORDERS OVER 999 EGP — شحن مجاني للطلبات فوق 999 جنيه",
+        "link": ""
+      }
+    },
+    "hero": {
+      "type": "hero-banner",
+      "settings": {
+        "heading": "DISTRICT 99",
+        "subheading": "STREETWEAR REDEFINED",
+        "text": "Collection 2025 — تصميم عصري، خامة بريميوم، ستايل يخطف النظر",
+        "button_label": "تسوق الآن",
+        "button_link": "shopify://collections/all",
+        "image": "",
+        "image_overlay_opacity": 40
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "BEST SELLERS — الأكثر مبيعاً",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "show_view_all": true
+      }
+    },
+    "image-with-text": {
+      "type": "image-with-text",
+      "settings": {
+        "heading": "QUALITY OVER HYPE",
+        "text": "كل قطعة مصنوعة بعناية بأجود الخامات. مقاسات مظبوطة، تقفيل عالي، و ستايل يليق بيك.",
+        "button_label": "اعرف اكتر",
+        "button_link": "shopify://pages/about"
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "settings": {
+        "title": "ليه DISTRICT 99 ؟",
+        "columns_desktop": 3
+      },
+      "blocks": {
+        "col1": {
+          "type": "column",
+          "settings": {
+            "title": "شحن سريع",
+            "text": "توصيل خلال 2-4 أيام لجميع المحافظات والدفع عند الاستلام"
+          }
+        },
+        "col2": {
+          "type": "column",
+          "settings": {
+            "title": "استرجاع مجاني",
+            "text": "14 يوم استرجاع واستبدال بدون أي مصاريف"
+          }
+        },
+        "col3": {
+          "type": "column",
+          "settings": {
+            "title": "خامة بريميوم",
+            "text": "قطن 100% معالَج ضد الانكماش والوبر"
+          }
+        }
+      },
+      "block_order": ["col1", "col2", "col3"]
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "heading": "خليك في المقدمة",
+        "text": "اشترك واحصل على خصم 10% على اول اوردر + عروض حصرية"
+      }
+    }
+  },
+  "order": ["announcement-bar", "hero", "featured-collection", "image-with-text", "multicolumn", "newsletter"]
+}

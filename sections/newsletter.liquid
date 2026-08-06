@@ -1,0 +1,25 @@
+<section class="section">
+  <div class="page-width">
+    <div class="newsletter">
+      <h2 class="newsletter__heading">{{ section.settings.heading | default: "خليك في المقدمة" }}</h2>
+      <p class="newsletter__text">{{ section.settings.text | default: "اشترك واحصل على خصم 10%" }}</p>
+      {% form 'customer', class: 'newsletter__form' %}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <input type="email" name="contact[email]" placeholder="اكتب بريدك الإلكتروني" required>
+        <button type="submit" class="button">اشتراك</button>
+        {{ form.errors | default_errors }}
+        {% if form.posted_successfully? %}<p style="color:var(--color-accent);margin-top:8px">تم الاشتراك بنجاح ✓</p>{% endif %}
+      {% endform %}
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Newsletter",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "خليك في المقدمة" },
+    { "type": "textarea", "id": "text", "label": "Text", "default": "اشترك واحصل على خصم 10%" }
+  ],
+  "presets": [{ "name": "Newsletter" }]
+}
+{% endschema %}

@@ -1,0 +1,33 @@
+<section class="section">
+  <div class="page-width">
+    {% if section.settings.title != blank %}<h2 class="section__title" style="text-align:center;margin-bottom:24px">{{ section.settings.title }}</h2>{% endif %}
+    <div class="cols">
+      {% for block in section.blocks %}
+        <div class="col" {{ block.shopify_attributes }}>
+          <h3 class="col__title">{{ block.settings.title }}</h3>
+          <p class="col__text">{{ block.settings.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Multicolumn",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Heading", "default": "ليه DISTRICT 99 ؟" },
+    { "type": "range", "id": "columns_desktop", "min": 1, "max": 4, "step": 1, "default": 3, "label": "Columns" }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "شحن سريع" },
+        { "type": "textarea", "id": "text", "label": "Text", "default": "توصيل خلال 2-4 أيام" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Multicolumn", "blocks": [{ "type": "column" }, { "type": "column" }, { "type": "column" }] }]
+}
+{% endschema %}

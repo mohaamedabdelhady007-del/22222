@@ -1,0 +1,19 @@
+<div class="page-width" style="margin-top:24px">
+  <div style="max-width:480px;margin-left:auto;background:#141414;border:1px solid var(--color-border);border-radius:16px;padding:20px">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'subtotal' %}<div style="display:flex;justify-content:space-between;font-weight:900;font-size:18px;margin-bottom:14px" {{ block.shopify_attributes }}><span>الإجمالي</span><span>{{ cart.total_price | money }}</span></div>
+        {% when 'buttons' %}<div {{ block.shopify_attributes }}><button class="button" style="width:100%" onclick="location.href='/checkout'">إتمام الشراء — Checkout</button><p style="opacity:.5;font-size:12px;text-align:center;margin-top:8px">الشحن والضرائب تحسب عند الدفع</p></div>
+      {% endcase %}
+    {% endfor %}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Cart Footer",
+  "blocks": [
+    { "type": "subtotal", "name": "Subtotal", "limit": 1 },
+    { "type": "buttons", "name": "Buttons", "limit": 1 }
+  ]
+}
+{% endschema %}

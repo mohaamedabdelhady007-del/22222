@@ -1,0 +1,25 @@
+{
+  "accessibility": {
+    "skip_to_text": "تخطي إلى المحتوى",
+    "refresh_page": "اختيار خيار يؤدي لتحديث الصفحة.",
+    "link_messages": { "new_window": "يفتح في نافذة جديدة." }
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "أضف للسلة",
+      "sold_out": "نفذت الكمية",
+      "unavailable": "غير متاح",
+      "value_unavailable": "{{ option_value }} - غير متاح"
+    }
+  },
+  "sections": {
+    "cart": {
+      "cart_error": "حدث خطأ أثناء تحديث السلة.",
+      "cart_quantity_error_html": "يمكنك إضافة [quantity] فقط من هذا المنتج."
+    }
+  },
+  "general": {
+    "search": { "search": "بحث" },
+    "newsletter": { "email_placeholder": "اكتب بريدك الإلكتروني", "subscribe": "اشتراك" }
+  }
+}

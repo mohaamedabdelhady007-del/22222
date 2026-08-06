@@ -1,0 +1,14 @@
+<div class="page-width" style="text-align:center;padding:80px 20px">
+  <h1 class="section__title" style="font-size:48px">{{ section.settings.heading | default: "404" }}</h1>
+  <p style="opacity:.6;margin:12px 0 24px">{{ section.settings.subtext }}</p>
+  <a href="{{ routes.root_url }}" class="button">العودة للرئيسية</a>
+</div>
+{% schema %}
+{
+  "name": "404",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "404 — الصفحة غير موجودة" },
+    { "type": "textarea", "id": "subtext", "label": "Subtext", "default": "الصفحة اللي بتدور عليها مش موجودة" }
+  ]
+}
+{% endschema %}

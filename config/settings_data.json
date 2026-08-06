@@ -1,0 +1,51 @@
+{
+  "current": {
+    "color_background": "#0a0a0a",
+    "color_foreground": "#ffffff",
+    "color_accent": "#ccff00",
+    "color_accent_text": "#000000",
+    "color_border": "#2a2a2a",
+    "page_width": 1280,
+    "cart_type": "drawer",
+    "social_instagram_link": "",
+    "social_tiktok_link": "",
+    "favicon": "",
+    "type_header_font": "inter_n9",
+    "type_body_font": "cairo_n4",
+    "sections": {
+      "header-group": {
+        "type": "header-group",
+        "sections": {
+          "announcement-bar": {
+            "type": "announcement-bar",
+            "settings": {
+              "text": "FREE SHIPPING ON ORDERS OVER 999 EGP — شحن مجاني فوق 999 جنيه",
+              "link": ""
+            }
+          },
+          "header": {
+            "type": "header",
+            "settings": {
+              "logo": "",
+              "menu": "main-menu",
+              "enable_sticky_header": true
+            }
+          }
+        },
+        "order": ["announcement-bar", "header"]
+      },
+      "footer-group": {
+        "type": "footer-group",
+        "sections": {
+          "footer": {
+            "type": "footer",
+            "settings": {}
+          }
+        },
+        "order": ["footer"]
+      }
+    },
+    "content_for_index": []
+  },
+  "presets": {}
+}

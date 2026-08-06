@@ -1,0 +1,27 @@
+<div class="section section--tight">
+  <div class="page-width">
+    <div class="grid">
+      {% for product in collection.products %}
+        {% render 'product-card', product: product %}
+      {% else %}
+        <p style="grid-column:1/-1;text-align:center;opacity:.6;padding:40px">لا يوجد منتجات في هذا القسم حالياً</p>
+      {% endfor %}
+    </div>
+    {% paginate collection.products by section.settings.products_per_page %}
+      {% if paginate.pages > 1 %}<div style="text-align:center;margin-top:24px">{{ paginate | default_pagination }}</div>{% endif %}
+    {% endpaginate %}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Product Grid",
+  "settings": [
+    { "type": "range", "id": "products_per_page", "min": 8, "max": 24, "step": 4, "default": 16, "label": "Products per page" },
+    { "type": "range", "id": "columns_desktop", "min": 2, "max": 5, "step": 1, "default": 4, "label": "Columns" },
+    { "type": "select", "id": "image_ratio", "label": "Image Ratio", "options": [{ "value": "adapt", "label": "Adapt" }, { "value": "square", "label": "Square" }], "default": "adapt" },
+    { "type": "checkbox", "id": "show_secondary_image", "label": "Show Second Image", "default": true },
+    { "type": "checkbox", "id": "enable_filtering", "label": "Filtering", "default": true },
+    { "type": "checkbox", "id": "enable_sorting", "label": "Sorting", "default": true }
+  ]
+}
+{% endschema %}

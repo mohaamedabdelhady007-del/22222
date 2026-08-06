@@ -1,0 +1,10 @@
+<div class="page-width">
+  <div class="section">
+    <h1 class="section__title">بحث</h1>
+    <form action="{{ routes.search_url }}" style="margin:20px 0;display:flex;gap:10px;max-width:500px"><input type="search" name="q" value="{{ search.terms | escape }}" placeholder="ابحث عن منتج..." style="flex:1;background:#141414;border:1px solid var(--color-border);border-radius:999px;padding:12px 18px;color:#fff"><button class="button">بحث</button></form>
+    {% if search.performed %}
+      <div class="grid">{% for item in search.results %}{% if item.object_type == 'product' %}{% render 'product-card', product: item %}{% endif %}{% endfor %}</div>
+    {% endif %}
+  </div>
+</div>
+{% schema %}{ "name": "Search", "settings": [{ "type": "range", "id": "columns_desktop", "min": 2, "max": 5, "step": 1, "default": 4, "label": "Columns" }, { "type": "checkbox", "id": "enable_filtering", "label": "Filtering", "default": true }, { "type": "checkbox", "id": "enable_sorting", "label": "Sorting", "default": true }] }{% endschema %}

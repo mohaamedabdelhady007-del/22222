@@ -1,0 +1,15 @@
+<div class="section section--tight">
+  <div class="page-width" style="text-align:center">
+    <h1 class="section__title">{{ collection.title }}</h1>
+    {% if section.settings.show_collection_description and collection.description != blank %}<p style="opacity:.6;margin-top:10px">{{ collection.description }}</p>{% endif %}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Collection Banner",
+  "settings": [
+    { "type": "checkbox", "id": "show_collection_description", "label": "Show Description", "default": true },
+    { "type": "checkbox", "id": "show_collection_image", "label": "Show Image", "default": true }
+  ]
+}
+{% endschema %}
